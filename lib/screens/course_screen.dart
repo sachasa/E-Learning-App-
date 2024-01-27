@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/description_section.dart';
 import 'package:flutter_application_1/widgets/videos_section.dart';
 
-class CourseScreen extends StatefulWidget{
+class CourseScreen extends StatefulWidget {
   String img;
   CourseScreen(this.img);
   @override
   State<CourseScreen> createState() => _CourseScreenState();
 }
 
-class _CourseScreenState extends State<CourseScreen>{
+class _CourseScreenState extends State<CourseScreen> {
+  //this is new calss
 
   bool isVideosSection = true;
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         foregroundColor: Colors.black,
@@ -26,16 +27,14 @@ class _CourseScreenState extends State<CourseScreen>{
             fontWeight: FontWeight.bold,
             letterSpacing: 1,
           ),
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 10),
+            child:
+                Icon(Icons.notifications, size: 28, color: Color(0xFF674AEF)),
           ),
-          actions: [
-            Padding(
-              padding: EdgeInsets.only(right: 10),
-              child: Icon(Icons.notifications,
-              size: 28,
-              color: Color(0xFF674AEF)
-              ),
-            ),
-          ],
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
@@ -104,9 +103,9 @@ class _CourseScreenState extends State<CourseScreen>{
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Material(
-                    color: isVideosSection 
-                    ? Color(0xFF674AEF) 
-                    : Color(0xFF674AEF).withOpacity(0.6),
+                    color: isVideosSection
+                        ? Color(0xFF674AEF)
+                        : Color(0xFF674AEF).withOpacity(0.6),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
@@ -115,7 +114,8 @@ class _CourseScreenState extends State<CourseScreen>{
                         });
                       },
                       child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 35),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 15, horizontal: 35),
                         child: Text(
                           "Videos",
                           style: TextStyle(
@@ -127,8 +127,10 @@ class _CourseScreenState extends State<CourseScreen>{
                       ),
                     ),
                   ),
-                   Material(
-                    color: isVideosSection ? Color(0xFF674AEF).withOpacity(0.6) :Color(0xFF674AEF),
+                  Material(
+                    color: isVideosSection
+                        ? Color(0xFF674AEF).withOpacity(0.6)
+                        : Color(0xFF674AEF),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: () {
@@ -137,7 +139,8 @@ class _CourseScreenState extends State<CourseScreen>{
                         });
                       },
                       child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 35),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 15, horizontal: 35),
                         child: Text(
                           "Description",
                           style: TextStyle(
