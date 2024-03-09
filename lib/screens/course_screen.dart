@@ -41,7 +41,7 @@ class _CourseScreenState extends State<CourseScreen> {
         child: ListView(
           children: [
             Container(
-              padding: EdgeInsets.all(5),
+              padding: EdgeInsets.only(top: 10),
               width: MediaQuery.of(context).size.width,
               height: 200,
               decoration: BoxDecoration(
