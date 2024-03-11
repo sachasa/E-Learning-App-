@@ -53,7 +53,7 @@ class _CourseScreenState extends State<CourseScreen> {
               ),
               child: Center(
                 child: Container(
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
